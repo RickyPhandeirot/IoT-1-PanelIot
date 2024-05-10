@@ -21,17 +21,25 @@
                     <span>Dashboard</span></a>
             </li>
 
+            <li class="nav-item active">
+                <a class="nav-link" href="{{ route('dashboard') }}">
+                    <i class="fas fa-lightbulb"></i>
+                    <span>Dashboard</span></a>
+            </li>
+
             <!-- Nav Item - Saklar -->
             <li class="nav-item">
                 <a class="nav-link" href="{{ route('saklar') }}">
                     <i class="fas fa-toggle-off"></i>
                     <span>Saklar</span></a>
             </li>
+          <!-- Nav Item - LED -->
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('temperatures') }}">
-                    <i class="fas fa-temperature-high"></i>
-                    <span>Monitoring Temperature</span></a>
+                <a class="nav-link" href="{{ route('dashboard') }}">
+                    <i class="fas fa-lightbulb"></i>
+                    <span>LED Control</span></a>
             </li>
+
             <!-- Nav Item - Device -->
             <li class="nav-item">
                 <a class="nav-link" href="{{ route('device') }}">

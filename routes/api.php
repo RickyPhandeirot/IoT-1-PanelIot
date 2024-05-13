@@ -6,6 +6,7 @@ use App\Http\Controllers\Api\LampController;
 use App\Http\Controllers\Api\SensorController;
 use App\Http\Controllers\Api\SensorLogController;
 use App\Http\Controllers\Api\TemperatureController;
+use App\Http\Controllers\Api\LedController;
 use App\Http\Controllers\Api\UserController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -89,4 +90,22 @@ Route::prefix('v1/temperatures')->name('temperatures.')->group(function () {
     // POST api/v1/temperatures
     Route::post('/', [TemperatureController::class, 'store'])
         ->name('store');
+});
+
+Route::prefix('v1/leds')->name('leds.')->group(function () {
+    // http method/ action: GET, POST, PUT, PATCH, DELETE
+    // GET api/v1/leds
+    Route::get('/', [LedController::class, 'index'])
+        ->name('index');
+    Route::get('/{id}', [LedController::class, 'show'])
+        ->name('show');
+
+    // POST api/v1/leds
+    Route::post('/', [LedController::class, 'store'])
+        ->name('store');
+
+    Route::put('/{id}', [LedController::class, 'update'])
+        ->name('update');
+    Route::delete('/{id}', [LedController::class, 'destroy'])
+        ->name('destroy');
 });

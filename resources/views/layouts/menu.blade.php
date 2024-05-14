@@ -41,6 +41,12 @@
                     <span class="ml-2">Device</span></a>
             </li>
 
+            <li class="nav-item">
+                <a class="nav-link" href="{{ route('temperatures') }}">
+                    <i class="fas fa-temperature-high"></i>
+                    <span>Monitoring Temperature</span></a>
+            </li>
+
             <!-- Nav Item - Tables -->
             <li class="nav-item">
                 <a class="nav-link" href="{{ route('user') }}">

@@ -43,7 +43,7 @@ Route::controller(AuthController::class)->group(function () {
 // ->name('temperatures');
 
 Route::controller(TemperatureController::class)->group(function () {
-    Route::get('/temperatures', 'index')->name('temperature');
+    Route::get('/temperatures', 'index')->name('temperatures');
 });
 
 Route::controller(LedController::class)->group(function () {
